@@ -1,5 +1,7 @@
 require "sinatra"
 
 get "/" do
-  "Goodbye, World!"
+  DAYNAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  dayname = DAYNAMES[Time.now.wday]
+  "Hello, World! Happy #{dayname}."
 end
